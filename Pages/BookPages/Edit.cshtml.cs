@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Mihali_Antonia_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Mihali_Antonia_Lab2.Pages.BookPages
 {
+    [Authorize(Roles = "Admin")]
     public class EditModel : BookCategoriesPageModel
     {
         private readonly Mihali_Antonia_Lab2Context _context;

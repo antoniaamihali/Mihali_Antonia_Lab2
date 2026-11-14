@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Mihali_Antonia_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Mihali_Antonia_Lab2.Pages.BookPages
 {
+    [Authorize(Roles = "Admin")]
     public class CreateModel : BookCategoriesPageModel
     {
         private readonly Mihali_Antonia_Lab2Context _context;
